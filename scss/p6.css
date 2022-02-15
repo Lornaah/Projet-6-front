@@ -1,0 +1,118 @@
+.btn-primary { 
+  color: #FFFFFF; 
+  border-color: #8CE685;
+  background-image:linear-gradient(to right, #63BB58, #8CC449);
+} 
+ 
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active,
+.btn-primary:active:focus,
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary { 
+  color: #FFFFFF; 
+  background-color: #2F8A23; 
+  border-color: #63BB58;
+  box-shadow: none;
+} 
+ 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary { 
+  background-image: none;
+} 
+
+.headerbar {
+max-width: 1700px;
+}
+
+[aria-current] {
+color: #0076D9;
+}
+
+.btn-secondary { 
+  color: #FFFFFF; 
+  background-color: #0076D9; 
+  border-color: #0076D9;
+} 
+ 
+.btn-secondary:active,
+.btn-secondary:active:focus, 
+.btn-secondary.active, 
+.open .dropdown-toggle.btn-secondary {
+  background-color: #005396; 
+  color: #FFFFFF; 
+  border-color: #005396; 
+  box-shadow: none;
+} 
+.btn-secondary:hover,
+.btn-secondary:visited,
+.btn-secondary:focus{
+	background-color: #0076D9;
+	box-shadow: none;
+}
+
+.btn-tertiary { 
+  color: #ffffff; 
+  background-color: #63BB58; 
+  border-color: #1AB80E; 
+  padding: 0px 75px;
+} 
+ 
+
+.btn-tertiary:focus, 
+.btn-tertiary:active,
+.btn-tertiary:active:focus, 
+.btn-tertiary.active, 
+.open .dropdown-toggle.btn-tertiary { 
+  color: #ffffff; 
+  background-color: #2F8A23; 
+  border-color: #1AB80E; 
+  box-shadow: none;
+} 
+
+.section2 .mb-0{
+	max-width: 250px;
+}
+
+.paiements {
+	background-color: #F5F5F5;
+}
+
+/* SASS :
+
+ $greenBrand : #2F8A23; -> scss pour déclarer une variable de couleur
+
+@mixin mixin-name {
+	css-property : value;
+}   -> pour déterminer un bloc css que l'on va répéter régulièrement
+@include minin-name; -> pour l'inclure à l'endroit que l'on souhaite
+
+-> On peut utiliser des paramètres de Mixin pour redéfinir / personnaliser la section actuelle 
+@mixin heading-shadow($colour){
+text-shadow: .55rem .55rem #15DEA5;
+}
+
+@mixin heading-shadow($colour:$colour-primary, $size: $heading-shadow-size){
+		text-shadow: $size $size darken($colour, 10%);
+} -> On peut utiliser l'argument "darken" pour foncer automatiquement un élément, on indique le % après.// lighten
+https://sass-lang.com/documentation/modules
+
+-> les conditions :
+@if ( lightness($colour) < 25% ) {
+	 $colour: lighten($colour, 10%);
+}@else{
+	 $colour: darken($colour, 10%);
+}
+
+&& = and -> @if ( lightness($colour) < 25% ) and ( lightness($colour) > 10% ) {...}
+|| = or -> @if ( lightness($colour) < 25% ) or ( saturation($colour) > 10% ) {...}
+
+-> les fonctions : 
+@function lightness-shift($colour){
+	 @if ( lightness($colour) < 25% ) {
+			$colour: lighten($colour, 10%);
+	 }@else{
+			 $colour: darken($colour, 10%);
+	 }
+}
