@@ -1,6 +1,7 @@
 
 $primary: #5CB95C;
 $secondary: #0076D9;
+$danger: #ce1020;
 $table-bg-scale : 0;
 $pagination-color: $secondary;
 $pagination-active-bg: $secondary;
@@ -73,4 +74,14 @@ input[type=password]{
 
 .modal-dialog{
   max-width: 400px;
+}
+
+
+.wallet{
+  background-image: url("../images/purse.png");
+  background-size: 45px;
+  background-repeat: no-repeat;
+  background-position: 60px -3px;
+  width: 390px;
+  text-align: center;
 }
